@@ -7,13 +7,15 @@
 #SBATCH -o sratools-%j.out
 #SBATCH -e sratools-%j.err
 
+#################
 ## DESCRIPTION ##
-# Runs prefect and fasterq-dump to download read file from SRA #
+# Runs prefect and fasterq-dump to download a read file from SRA #
 # Set up: 
     # Create conda env with sra-tools installed 
         # conda create -n sratools -c bioconda sra-tools
     # Edit paths to: $OUTPUT_DIR
     # Edit $SRR ID 
+#################
 
 source activate sratools
 
