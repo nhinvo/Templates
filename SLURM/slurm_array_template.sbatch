@@ -9,8 +9,8 @@
 
 #SBATCH --array=ARRAY_START_NUM-ARRAY_END_NUM%INCREMENT_NUM  # e.g. 1-10%5 (1 to 10 by 5)
 
-#SBATCH -o %a.%j.out
-#SBATCH -e %a.%j.err
+#SBATCH -o log-%j_%a.out
+#SBATCH -e log-%j_%a.err
 
 date
 

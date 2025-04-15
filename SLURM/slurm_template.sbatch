@@ -9,8 +9,8 @@
 
 # #SBATCH --exclusive  # when requesting for an entire node
 
-#SBATCH -o %j.out
-#SBATCH -e %j.err
+#SBATCH -o log-%j.out
+#SBATCH -e log-%j.err
 
 date
 
