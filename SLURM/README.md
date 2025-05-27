@@ -114,3 +114,8 @@ Many bioinformatics tasks fall into EP
   - `sbatch --partition=sched_mit_chisholm --ntasks=1 --cpus-per-task=1 --mem=10G --time=1-0 --wrap="python3 script_name.py" --job-name=job_name`  
 - Changing array throttling limit - while job is running 
   - `scontrol update ArrayTaskThrottle=[total_job] JobId=[job_ID]`
+- Batch cancelling jobs:
+  - Cancel jobs with shared name: 
+    - `squeue -u [username] | grep 'job_name' | awk '{print $1}' | xargs scancel`
+  - If jobs start with "9916"
+    - `squeue -u [username] | grep '9916' | awk '{print $1}' | xargs scancel`
