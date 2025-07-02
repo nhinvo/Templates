@@ -12,12 +12,10 @@
 #SBATCH -o log-%j_%a.out
 #SBATCH -e log-%j_%a.err
 
-date
-
-echo "SLURM Job ID: ${SLURM_JOB_ID}"
-echo "Array index number: ${SLURM_ARRAY_TASK_ID} (out of: ${SLURM_ARRAY_TASK_MAX})"
-echo "Array Job ID: ${SLURM_ARRAY_JOB_ID}"
-echo "CPU Requested/Allocated for task: ${SLURM_CPUS_PER_TASK}"
+echo "$(date): SLURM Job ID: ${SLURM_JOB_ID}"
+echo "$(date): Array index number: ${SLURM_ARRAY_TASK_ID} (out of: ${SLURM_ARRAY_TASK_MAX})"
+echo "$(date): Array Job ID: ${SLURM_ARRAY_JOB_ID}"
+echo "$(date): CPU Requested/Allocated for task: ${SLURM_CPUS_PER_TASK}"
 
 # activate any conda environment neccesary 
 eval "$(conda shell.bash hook)"

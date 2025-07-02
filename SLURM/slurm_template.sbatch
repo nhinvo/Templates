@@ -12,10 +12,8 @@
 #SBATCH -o log-%j.out
 #SBATCH -e log-%j.err
 
-date
-
-echo "SLURM Job ID: ${SLURM_JOB_ID}"
-echo "CPU Requested/Allocated for task: ${SLURM_CPUS_PER_TASK}"
+echo "$(date): SLURM Job ID: ${SLURM_JOB_ID}"
+echo "$(date): CPU Requested/Allocated for task: ${SLURM_CPUS_PER_TASK}"
 
 eval "$(conda shell.bash hook)"
 conda activate CONDA_ENV_NAME 
