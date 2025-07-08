@@ -6,6 +6,9 @@ Repository of templates.
 - BLAST script for files in a directory
 - DIAMOND accelerated Blast for files in a list 
 
+#### GenomeAssemblySpades
+- Spades Genome Assembly, Metabat2 Binning, GTDB-tk Classification, and CheckM2 quality assessment. 
+
 #### GenomeMSA
 - Whole Genome Alignment: prokka annotation, reset genome on dnaA gene, multiple sequence alignment using mafft
 
@@ -20,3 +23,4 @@ Repository of templates.
 
 ## SLURM 
 - SLURM HPC array and non-array sbatch script templates
+- Useful SLURM commands 
