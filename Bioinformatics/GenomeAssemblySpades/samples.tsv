@@ -1,0 +1,3 @@
+SampleA	path/to/forward_reads.fastq	path/to/reverse_reads.fastq
+SampleB	path/to/forward_reads.fastq	path/to/reverse_reads.fastq
+SampleC	path/to/forward_reads.fastq	path/to/reverse_reads.fastq
