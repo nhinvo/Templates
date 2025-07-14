@@ -15,6 +15,8 @@ alias DIR_NAME='cd /PATH/TO/DIR;pwd;ls'  # move to commonly used fodler
 # shortcuts for slurm 
 alias myq='squeue -u USERNAME'
 alias QUEUE_NAME='squeue -p PARTITION_NAME -u USERNAME'  # my jobs on a commonly used partition 
+alias sinfo=sinfo --format="%21P %12l %5D %10T %5c %9m %N" --states=ALLOC,ALLOCATED,COMP,COMPLETING,IDLE,MIX,MIXED
+alias sinfo_idle=sinfo --format="%21P %12l %5D %10T %5c %9m %N" --states=IDLE
 
 # salloc
 alias mysalloc='salloc -N 1 -n 1 -c 1 --time=10:00:00 -p PARTITION_NAME'
